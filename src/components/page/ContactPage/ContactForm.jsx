@@ -68,7 +68,6 @@ const ContactForm = ({ handleFormSubmit }) => {
       onChange: (e) => setForm({ ...form, [registerField]: e.target.value }),
     };
   };
-  console.log("🚀form---->", form);
 
   return (
     <div className="form">

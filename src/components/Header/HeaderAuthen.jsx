@@ -58,10 +58,7 @@ const HeaderAuthen = () => {
             onClick={_onShowDropdown}
           >
             <div className="userlogged__avatar-img user__img">
-              <img
-                src="/img/cfd-share-thumbnail-facebook.png"
-                alt="Avatar teacher"
-              />
+              <img src="/img/login.png" alt="Avatar teacher" />
             </div>
             <i className="userlogged__avatar-icon">
               <svg
@@ -82,10 +79,7 @@ const HeaderAuthen = () => {
           >
             <div className="userlogged__dropdown-info">
               <div className="user__img">
-                <img
-                  src="/img/cfd-share-thumbnail-facebook.png"
-                  alt="Avatar teacher"
-                />
+                <img src="/img/login.png" alt="Avatar teacher" />
               </div>
               <Link to={PATHS.PROFILE.INDEX} className="user__info">
                 <p className="title --t4">

@@ -4,7 +4,6 @@ import { formatCurrency, formatDate } from "../../../utils/format";
 
 const MyPayment = () => {
   const { paymentInfo } = useAuthContext();
-  console.log("🚀paymentInfo---->", paymentInfo);
   return (
     <div className="tab__content-item" style={{ display: "block" }}>
       {!!!paymentInfo?.length > 0 ? (
@@ -17,7 +16,6 @@ const MyPayment = () => {
           {" "}
           {paymentInfo.map((item, index) => {
             const { course, id, paymentMethod, createdAt } = item;
-            console.log("🚀item---->", item);
             return (
               <div key={id} className="itemhistory">
                 <div className="name">{course.name}</div>

@@ -19,9 +19,13 @@ const ContactSideBar = () => {
       </div>
       <div className="sidebar__business">
         <p>Đối với yêu cầu kinh doanh xin vui lòng gửi cho chúng tôi tại:</p>
-        <a href="#">business@cfdcircle.vn</a>
+        <a href="mailto:business@cfdcircle.vn">business@cfdcircle.vn</a>
       </div>
-      <a href="#" className="sidebar__messenger btn btn--primary">
+      <a
+        href="https://www.facebook.com/cfdcircle"
+        target="_blank"
+        className="sidebar__messenger btn btn--primary"
+      >
         Trò chuyện trực tuyến
       </a>
     </div>

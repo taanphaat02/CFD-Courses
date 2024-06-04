@@ -8,8 +8,6 @@ const MyCourse = () => {
   const { courseInfo, handleGetProfileCourse, handleGetProfilePayment } =
     useAuthContext();
 
-  console.log("🚀courseInfo---->", courseInfo);
-
   return (
     <div className="tab__content-item" style={{ display: "block" }}>
       <div className="courses__list">

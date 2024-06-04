@@ -5,7 +5,6 @@ const Accordion = ({ label = "", data = [] }) => {
   const [activeId, setActiveId] = useState("");
   const _onClickTitle = (e, id) => {
     e.stopPropagation();
-    // console.log(`click id`, activeId);
     setActiveId(id !== activeId ? id : "");
   };
   return (

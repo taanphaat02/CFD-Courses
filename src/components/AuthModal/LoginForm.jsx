@@ -50,7 +50,6 @@ const LoginForm = () => {
       console.log("Submit error", errorObject);
     } else {
       setLoading(true);
-      // console.log("Submit success", form);
       handleLogin?.({ ...form }, () => {
         setTimeout(() => {
           setLoading(false);

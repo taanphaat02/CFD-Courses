@@ -21,25 +21,8 @@ const HeroSection = ({
   };
 
   const { profile, courseInfo } = useAuthContext();
-  console.log("🚀profile---->", profile);
-  console.log("🚀courseInfo---->", courseInfo);
-  console.log("🚀id of course---->", id);
-
-  let isRegistered = true;
-
-  {
-    courseInfo?.length > 0 &&
-      courseInfo.map((course) => {
-        // console.log("🚀list id---->", course.course.id);
-
-        if (course?.course?.id === id) {
-          return (isRegistered = true);
-        } else {
-          isRegistered = false;
-        }
-      });
-  }
-  console.log("🚀isRegistered---->", isRegistered);
+  
+  const isRegistered = courseInfo?.some((course) => course?.course?.id === id);
 
   return (
     <section className="hero herodetail">

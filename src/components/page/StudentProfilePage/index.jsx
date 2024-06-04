@@ -15,7 +15,7 @@ const StudentProfilePage = () => {
               <div className="useravatar">
                 <div className="avatar">
                   <div className="img">
-                    <img src="/img/avatar_nghia.jpg" alt="avatar" />
+                    <img src="/img/login.png" alt="avatar" />
                   </div>
                 </div>
                 <h3 className="title --t3">{firstName || ""}</h3>

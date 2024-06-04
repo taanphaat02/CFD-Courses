@@ -68,10 +68,7 @@ function App() {
 
             {/* PRIVATE ROUTE */}
             <Route element={<PrivateRoute redirectPath={PATHS.HOME} />}>
-              <Route
-                path={PATHS.COURSE.ORDER}
-                element={<CourseOrderPage />}
-              ></Route>
+              <Route path={PATHS.COURSE.ORDER} element={<CourseOrderPage />} />
               <Route
                 path={PATHS.PROFILE.INDEX}
                 element={<StudentProfilePage />}

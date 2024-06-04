@@ -1,3 +1,6 @@
+import PATHS from "@/constants/paths";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
@@ -7,13 +10,13 @@ const Footer = () => {
             <h3 className="label">Thông tin</h3>
             <ul>
               <li>
-                <a href="about.html">Về CFD Circle</a>
+                <Link to={PATHS.ABOUT}>Về CFD Circle</Link>
               </li>
               <li>
-                <a href="courses.html">Khóa học</a>
+                <Link to={PATHS.COURSE.INDEX}>Khóa học</Link>
               </li>
               <li>
-                <a href="blog.html">Bài viết</a>
+                <Link to={PATHS.BLOG.INDEX}>Bài viết</Link>
               </li>
             </ul>
           </div>
@@ -21,13 +24,13 @@ const Footer = () => {
             <h3 className="label">Hỗ trợ</h3>
             <ul>
               <li>
-                <a href="contact.html">Trung tâm hỗ trợ</a>
+                <Link to={PATHS.CONTACT}>Trung tâm hỗ trợ</Link>
               </li>
               <li>
-                <a href="payment-method.html">Phương thức thanh toán</a>
+                <Link to={PATHS.PAYMENT}>Phương thức thanh toán</Link>
               </li>
               <li>
-                <a href="privacy.html">Chính sách và điều khoản</a>
+                <Link to={PATHS.PRIVACY}>Chính sách và điều khoản</Link>
               </li>
             </ul>
           </div>

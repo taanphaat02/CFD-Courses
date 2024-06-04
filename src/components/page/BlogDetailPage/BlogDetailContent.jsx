@@ -1,7 +1,23 @@
+import PATHS from "@/constants/paths";
 import { Empty } from "antd";
 import React from "react";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+} from "react-share";
 
-const BlogDetailContent = ({ id, image, description, loading = true }) => {
+const BlogDetailContent = ({
+  id,
+  image,
+  description,
+  loading = true,
+  slug,
+}) => {
+  const urlShare = window.location.href;
   return (
     <>
       {!!id && (
@@ -18,15 +34,19 @@ const BlogDetailContent = ({ id, image, description, loading = true }) => {
             dangerouslySetInnerHTML={{ __html: description }}
           ></div>
           <div className="blogdetail__line" />
-          <div className="blogdetail__content-social btngroup">
-            <a href="#" className="btn btn-fb">
-              <img src="/img/icon-fb-share.svg" alt />
-              <span>Share</span>
-            </a>
-            <a href="#" className="btn btn-linkedin">
-              <img src="/img/icon-in-share.svg" alt />
-              <span>Share</span>
-            </a>
+          <div
+            className="blogdetail__content-social btngroup"
+            style={{ gap: 20 }}
+          >
+            <FacebookShareButton url={urlShare} quote="share">
+              <FacebookIcon />
+            </FacebookShareButton>
+            <TwitterShareButton url={urlShare} quote="share">
+              <TwitterIcon />
+            </TwitterShareButton>
+            <LinkedinShareButton url={urlShare} quote="share">
+              <LinkedinIcon />
+            </LinkedinShareButton>
           </div>
         </div>
       )}

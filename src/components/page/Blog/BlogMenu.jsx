@@ -6,7 +6,6 @@ const BlogMenu = ({ categories, selectedCategory, setSelectedCategory }) => {
     e.preventDefault();
     setSelectedCategory(id);
   };
-  // console.log("selectedCategory:", selectedCategory);
 
   return (
     <div className="blog__menu">

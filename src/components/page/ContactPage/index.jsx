@@ -24,9 +24,7 @@ const ContactPage = () => {
     };
     execute?.(payload, {
       onSuccess: (data) => {
-        console.log("data", data);
         message.success("Gửi yêu cầu hỗ trợ thành công");
-        // navigate(PATHS.HOME);
       },
       onFail: (error) => {
         console.log("error", error);

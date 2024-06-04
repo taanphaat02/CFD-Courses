@@ -37,18 +37,8 @@ const HeaderTop = ({ id, image, name, teacherInfo = {}, price, orderLink }) => {
   }, [id]);
 
   const { profile, courseInfo } = useAuthContext();
-  let isRegistered = true;
+  const isRegistered = courseInfo?.some((course) => course?.course?.id === id);
 
-  {
-    courseInfo?.length > 0 &&
-      courseInfo.map((course) => {
-        if (course?.course?.id === id) {
-          isRegistered = true;
-        } else {
-          isRegistered = false;
-        }
-      });
-  }
   return (
     <div className="headtop">
       <div className="container-fluid">

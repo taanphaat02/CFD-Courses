@@ -7,6 +7,7 @@ import Input from "../../Input";
 
 const MyInfo = () => {
   const { profile, handleUpdateProfile } = useAuthContext();
+  const [error, setError] = useState({});
 
   const initalForm = useRef({
     firstName: "",
@@ -19,7 +20,7 @@ const MyInfo = () => {
 
   const [form, setForm] = useState(initalForm.current);
 
-  const [error, setError] = useState({});
+  const isChanged = JSON.stringify(initalForm.current) !== JSON.stringify(form);
 
   useEffect(() => {
     if (profile) {
@@ -71,8 +72,6 @@ const MyInfo = () => {
       onChange: (e) => setForm({ ...form, [registerField]: e.target.value }),
     };
   };
-
-  const isChanged = JSON.stringify(initalForm.current) !== JSON.stringify(form);
 
   useEffect(() => {
     if (profile) {
@@ -136,19 +135,19 @@ const MyInfo = () => {
         </div>
         <Input
           label="Facebook URL"
-          // required
+          required
           placeholder="Facebook URL"
           {...register("facebookURL")}
         />
         <Input
           label="Website"
-          // required
+          required
           placeholder="Website"
           {...register("website")}
         />{" "}
         <Input
           label="Giới thiệu bản thân"
-          // required
+          required
           renderInput={(inputProps) => {
             return <TextArea {...inputProps} />;
           }}

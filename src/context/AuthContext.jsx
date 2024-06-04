@@ -50,11 +50,7 @@ const AuthContextProvider = ({ children }) => {
         handleGetProfilePayment();
         handleCloseModal();
       }
-      /*      if (res?.data?.data) {
-        const { token: accessToken, refreshToken } = res.data.data || {};
-        console.log("accessToken", accessToken);
-        console.log("refreshToken", refreshToken);
-      } */
+    
     } catch (error) {
       console.log("🚀error---->", error);
       message.error("Đăng nhập thất bại");

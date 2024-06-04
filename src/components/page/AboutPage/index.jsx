@@ -140,9 +140,9 @@ const AboutPage = () => {
                 sát cánh cùng bạn trong khoá học offline tại học viện CFD Circle
                 ở số 11b, Phan Kế Bính, Đa Kao, Quận 1, TP Hồ Chí Minh.
               </div>
-              <a href="courses.html" className="btn btn--primary">
+              <Link to={PATHS.COURSE.INDEX} className="btn btn--primary">
                 Khám phá
-              </a>
+              </Link>
             </div>
           </div>
           <div className="aboutstudy__item">
@@ -157,9 +157,9 @@ const AboutPage = () => {
                 Meet, gọi video chia sẻ màn hình và được giảng viên, mentor hỗ
                 trợ như khi bạn học offline.
               </div>
-              <a href="courses.html" className="btn btn--primary">
+              <Link to={PATHS.COURSE.INDEX} className="btn btn--primary">
                 Khám phá
-              </a>
+              </Link>
             </div>
           </div>
           <div className="aboutstudy__item">

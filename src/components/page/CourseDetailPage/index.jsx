@@ -47,7 +47,6 @@ const CourseDetailPage = () => {
     price: formatCurrency(price),
     orderLink,
   };
-  // console.log('🚀courseDetailData---->',courseDetailData );
   const apiLoading = courseDetailLoading || questionLoading || courseLoading;
 
   const pageLoading = useDebounce(apiLoading, 500);

@@ -102,12 +102,14 @@ const RegisterForm = () => {
           {...register("email")}
         />
         <Input
+          type="password"
           label="Mật khẩu"
           placeholder="Mật khẩu"
           required
           {...register("password")}
         />
         <Input
+          type="password"
           label="Xác nhận mật khẩu"
           placeholder="Xác nhận mật khẩu"
           required
